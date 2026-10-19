@@ -1,0 +1,31 @@
+# Candidate gateway locations in Chile.
+# Each entry represents a distinct hazard profile. The contact-window analysis
+# shows the four are near-equivalent in orbital terms, so the choice can rest
+# on societal relevance and data availability.
+
+stations:
+  - name: Region Metropolitana
+    latitude_deg: -33.45
+    longitude_deg: -70.67
+    altitude_km: 0.57
+    hazard: Prolonged power blackout; highest affected population density
+
+  - name: Constitucion
+    latitude_deg: -35.33
+    longitude_deg: -72.41
+    altitude_km: 0.01
+    hazard: Tsunami; documented 2010 case
+
+  - name: Nahuelbuta
+    latitude_deg: -37.80
+    longitude_deg: -73.00
+    altitude_km: 0.60
+    hazard: Wildfire; isolation through road closure
+
+  - name: Puerto Aysen
+    latitude_deg: -45.40
+    longitude_deg: -72.70
+    altitude_km: 0.01
+    hazard: Structural permanent isolation
+
+default_station: Region Metropolitana

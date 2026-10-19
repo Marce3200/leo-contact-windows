@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: leo-contact-windows
+message: If this software contributes to your work, please cite it.
+type: software
+authors:
+  - family-names: Quezada-Araya
+    given-names: Marcela
+    affiliation: Universidad Andres Bello
+repository-code: https://github.com/Marce3200/leo-contact-windows
+license: MIT
+version: 0.1.0
+date-released: 2026-08-01
+keywords:
+  - LEO
+  - CubeSat
+  - LoRa
+  - contact plan
+  - emergency communications
+  - delay-tolerant networking

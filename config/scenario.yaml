@@ -1,0 +1,37 @@
+# Reference scenario parameters.
+
+propagation:
+  altitude_km: 550.0
+  min_elevation_deg: 10.0
+  duration_days: 7.0
+  step_s: 5.0
+
+link:
+  spreading_factor: 12       # reference case of the prior energy study
+  payload_bytes: 50
+  bandwidth_hz: 125000
+  coding_rate: 1             # 4/5
+
+traffic:
+  regime: disaster           # normal | emergency | disaster
+  passes_per_day_assumed: 4.0
+  deadline_s: 1800           # 30 min message expiration
+
+constellation_sweep:
+  # (n_planes, sats_per_plane)
+  configurations:
+    - [1, 1]
+    - [1, 2]
+    - [1, 3]
+    - [2, 2]
+    - [2, 3]
+    - [3, 2]
+    - [3, 3]
+    - [4, 3]
+    - [4, 4]
+    - [5, 4]
+    - [6, 4]
+    - [6, 5]
+    - [7, 5]
+    - [6, 6]
+    - [8, 6]

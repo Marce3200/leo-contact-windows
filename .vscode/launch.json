@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Single satellite: compare stations",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_single_satellite.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Constellation sweep",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_constellation_sweep.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Export contact plan",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/export_contact_plan.py",
+      "args": ["--planes", "1", "--per-plane", "1"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

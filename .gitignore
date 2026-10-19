@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+
+# Generated artefacts. Regenerate with the scripts in scripts/.
+results/*
+!results/.gitkeep
