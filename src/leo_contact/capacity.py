@@ -71,11 +71,16 @@ def bitrate(
 
 
 def dwell_compliant(spreading_factor: int, payload_bytes: int, **kwargs) -> bool:
-    """Whether a configuration fits within the per-channel dwell time limit.
+    """Whether a configuration fits within an FCC-style dwell time limit.
 
-    Relevant for the 915-928 MHz band under FCC-style regimes, which is the
-    case in Chile. It excludes SF11 and SF12 at 125 kHz for typical payloads.
+    Relevant only under regimes that impose a per-channel dwell limit, such
+    as the US 902-928 MHz band, where it excludes SF11 and SF12 at 125 kHz for
+    typical payloads. Chile imposes no such limit (see ``DWELL_TIME_LIMIT_S``),
+    so SF11 and SF12 remain admissible there; the reported flag is informative.
     """
+    # Previous docstring (superseded, regulatory premise corrected):
+    # Relevant for the 915-928 MHz band under FCC-style regimes, which is the
+    # case in Chile. It excludes SF11 and SF12 at 125 kHz for typical payloads.
     return airtime(spreading_factor, payload_bytes, **kwargs) <= DWELL_TIME_LIMIT_S
 
 

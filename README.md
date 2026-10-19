@@ -117,7 +117,7 @@ src/leo_contact/
   geometry.py        Coordinate transforms, ground stations, elevation
   windows.py         Window detection, merging and gap statistics
   constellation.py   Walker constellation construction and evaluation
-  capacity.py        LoRa airtime, dwell-time compliance, channel capacity
+  capacity.py        LoRa airtime, optional dwell-time check, channel capacity
   config.py          YAML loading
 scripts/             Command-line entry points
 tests/               47 tests, mostly analytical cross-checks

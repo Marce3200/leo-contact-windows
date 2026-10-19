@@ -52,8 +52,10 @@ def test_airtime_rejects_invalid_spreading_factor():
 @pytest.mark.parametrize("sf, compliant", [(7, True), (9, True), (10, True),
                                            (11, False), (12, False)])
 def test_dwell_limit_excludes_the_two_highest_spreading_factors(sf, compliant):
-    """Under the FCC-style regime applicable in Chile, SF11 and SF12 exceed
-    the 400 ms per-channel dwell limit for a 20-byte payload."""
+    """Under an FCC-style regime (not applicable in Chile), SF11 and SF12
+    exceed the 400 ms per-channel dwell limit for a 20-byte payload."""
+    # Previous docstring (superseded): "Under the FCC-style regime applicable
+    # in Chile, SF11 and SF12 exceed the 400 ms per-channel dwell limit..."
     assert dwell_compliant(sf, 20) is compliant
 
 

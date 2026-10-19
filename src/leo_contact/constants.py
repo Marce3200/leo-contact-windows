@@ -36,5 +36,14 @@ LORA_BANDWIDTH_HZ = 125_000
 """Default LoRa channel bandwidth [Hz]."""
 
 DWELL_TIME_LIMIT_S = 0.400
-"""Maximum per-channel dwell time under FCC-style regimes such as the one
-applicable in the 915-928 MHz band in Chile [s]."""
+"""Maximum per-channel dwell time under FCC-style regimes (US, 47 CFR 15.247)
+in the 902-928 MHz band [s].
+
+Not applicable in Chile: the national short-range device standard (Subtel,
+Res. Exenta 1.247 of 2026) limits EIRP to 500 mW in 915-928 MHz and requires
+spectrum sharing, but imposes no per-channel dwell-time limit. Kept for
+analyses under other regulatory regimes.
+"""
+# Previous docstring (superseded, regulatory premise corrected):
+# """Maximum per-channel dwell time under FCC-style regimes such as the one
+# applicable in the 915-928 MHz band in Chile [s]."""
